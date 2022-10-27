@@ -1,5 +1,5 @@
 # Server AVE (Authenticate via email)
-## Basic server with NodeJS, Express, MongoDB, Mongoose, JWT, Nodemailer and OAuth2.
+### Basic server with NodeJS, Express, MongoDB, Mongoose, JWT, Nodemailer and OAuth2
 
 Authentication system via email (send confirmation from a Gmail account). When registering, a code inside a token (with 60 seconds validity) is sent to the user's email to confirm their identity. The same to recover your password in case you forget it.
 
