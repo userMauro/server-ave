@@ -51,25 +51,25 @@ const message = (type, data) => {
     switch(type) {
         case "verify":
             return mail = {
-                subject: "Confirmar email Mercado Bue!",
+                subject: "Confirmar email",
                 text: "",
                 html: `<h1>${data.code}</h1>`, 
             }
         case "welcome":
             return mail = {
-                subject: `Bienvenida/o a Mercado Bue!`,
+                subject: `Bienvenida/o`,
                 text: "",
-                html: `<p>Hola ${data}! Antes de empezar a comprar o vender, te aconsejamos que leas nuestros tips:</p>`
+                html: `<p>Hola ${data}!</p>`
             }
         case "requestPassForgot":
             return mail = {
-                subject: "Recuperar contraseña Mercado Bue!",
+                subject: "Recuperar contraseña",
                 text: "",
                 html: `<h1>${data.code}</h1>`, 
             }
         case "confirmPassForgot":
             return mail = {
-                subject: "Nueva contraseña Mercado Bue!",
+                subject: "Nueva contraseña",
                 text: "",
                 html: `<p>Tu contraseña fue cambiada exitosamente.</p>`, 
             }

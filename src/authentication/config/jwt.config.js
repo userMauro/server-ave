@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 
 const createToken = (data, expiresIn) => {
     try {
-        return jwt.sign(data, process.env.SECRET, { expiresIn });   // "30d" login | "1h" confirmation mails
+        return jwt.sign(data, process.env.SECRET, { expiresIn });   // "30d" login | "60s" confirmation mails
     } catch (error) {
         console.log(error)
     }

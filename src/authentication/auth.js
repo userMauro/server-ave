@@ -26,7 +26,6 @@ const authOK = (req, res, next) => {
         };
 
         next()
-        // return res.status(200).json({status: true, msg: 'Credentials are ok'})
     } catch (error) {
         next(error);
     };
@@ -68,7 +67,7 @@ const preRegister = async (req, res, next) => {
         const token = createToken({email, code}, "60s") // 60s
         sendEmail({email, type: 'verify', data: {token, code}}, res, next)
     } catch (error) {
-        return next(error)
+        next(error)
     }
 }
 
@@ -101,7 +100,7 @@ const register = async (req, res, next) => {
 
         await sendEmail({email, type: 'welcome', data: username}, res, next) 
     } catch (error) {
-        return next(error)
+        next(error)
     };
 }
 
@@ -141,7 +140,7 @@ const login = async (req, res, next) => {
         const token = createToken(data, '30d')
         return res.send({status: true, msg: {username, email, role, token}})
     } catch (error) {
-        return next(error);
+        next(error);
     };
 }
 
@@ -191,7 +190,7 @@ const confirmPassForgot = async(req, res, next) => {
 
         sendEmail({email, type: 'confirmPassForgot'}, res, next)
     } catch (error) {
-        return next(error);
+        next(error);
     }
 }
 
