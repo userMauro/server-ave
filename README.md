@@ -39,3 +39,7 @@ You can get information [here](https://www.mongodb.com/docs/manual/reference/con
 ### "OAUTH GOOGLE CREDENTIALS"
 Step 4
 #
+
+### TO KEEP IN MIND!
+In the video of step 4 the "refresh_token" expires in about a week, I am looking for how to renew it automatically, so in the meantime you have to renew it manually.
+> AUTH_REFRESH_TOKEN=""
